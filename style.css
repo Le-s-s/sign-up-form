@@ -40,7 +40,7 @@ div {
     background:lightgrey;
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
+    justify-content:center;
     width:var(--right-width);
     align-items:center;
 }
@@ -69,17 +69,34 @@ div {
     color:white;
 }
 
-#sign-up{
-    height: 25vh;
-    background:white;
+#input-info{
+    height: 16vh;
+    width:var(--right-width);
     display:flex;
+    flex-direction:column;
     flex-wrap:wrap;
+    justify-content:space-between;
     align-items:center;
 }
 
 #form{
     display:flex;
     flex-direction:column;
-    height: 50vh;
     justify-content:center;
+}
+
+#info{
+    display:flex;
+    flex-direction:column;
+    align-self:center;
+}
+
+#sign-up{
+    height:25vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-self:flex-start;
+    background:white;
+    box-shadow: 5px 5px 5px rgb(0,0,0, 30%);
 }
