@@ -8,10 +8,7 @@
     padding: 0%;
 }
 
-div {
-    border:red;
-    border-style:solid;
-}
+
 
 #site-container{
     display:flex;
@@ -20,6 +17,7 @@ div {
     height:100vh;
 }
 
+/* left side */
 #odin-back {
     position:absolute;
     z-index: -1;
@@ -67,36 +65,50 @@ div {
 
 #credit{
     color:white;
+    
 }
 
+/* right */
+
 #input-info{
-    height: 16vh;
-    width:var(--right-width);
+    display:flex;
+    width:40vw;
+    justify-content:space-around;
+}
+
+#input-left {
     display:flex;
     flex-direction:column;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
+}
+
+#input-right {
+    display:flex;
+    flex-direction:column;
 }
 
 #form{
     display:flex;
     flex-direction:column;
-    justify-content:center;
 }
 
 #info{
     display:flex;
+    width:20vh;
     flex-direction:column;
-    align-self:center;
 }
 
 #sign-up{
     height:25vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-self:flex-start;
     background:white;
+    width:var(--right-width);
     box-shadow: 5px 5px 5px rgb(0,0,0, 30%);
+}
+
+#sign-up label h1{
+    height:8vh;
+    width:20vw;
+    align-content:center;
+    margin-left:3vw;
 }
