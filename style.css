@@ -34,20 +34,13 @@
 }
 
 
-.right{
-    background:lightgrey;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    width:var(--right-width);
-    align-items:center;
-}
+
 
 #odin-logo {
     margin-top: 40%;
     display:flex;
     flex-direction:row;
-    height:15%;
+    height:17%;
     width:100%;
     justify-content:center;
     background: rgba(0,0,0,40%)
@@ -70,15 +63,20 @@
 
 /* right */
 
-#input-info{
+.right{
+    background:lightgrey;
     display:flex;
-    width:40vw;
-    justify-content:space-around;
+    flex-direction:column;
+    justify-content:center;
+    width:var(--right-width);
+}
+
+#input-info{
+ display:flex;
 }
 
 #input-left {
-    display:flex;
-    flex-direction:column;
+    margin-right: 4vw;
 }
 
 #input-right {
@@ -87,28 +85,77 @@
 }
 
 #form{
-    display:flex;
-    flex-direction:column;
+
 }
 
 #info{
     display:flex;
-    width:20vh;
     flex-direction:column;
 }
 
 #sign-up{
-    height:25vh;
-    display:flex;
-    flex-direction:column;
+    height:30vh;
     background:white;
     width:var(--right-width);
     box-shadow: 5px 5px 5px rgb(0,0,0, 30%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-#sign-up label h1{
-    height:8vh;
-    width:20vw;
-    align-content:center;
-    margin-left:3vw;
+#form button{
+    width:15vw;
+    height:4.5vh;
+    color:white;
+    background:darkolivegreen;
+    border-radius:0.5vw;
+}
+
+.right p,.right b, .right button, #input-info {
+    margin-left: 5%;
+    width: 80%;
+}
+
+.right b, .right button, #sign-up{
+     margin-top:4%;
+ }
+
+.right p {
+    margin-bottom:4%;
+}
+
+#info input{
+    height:3vh;
+    border-radius: 0.5vw;
+    border-color:lightgray;
+}
+
+#info input:valid{
+    border-color:green;
+    
+}
+
+#info input:invalid{
+    border-color:red;
+}
+
+#input-info, .right label b{
+    margin-bottom: 2%;
+}
+
+.right label b {
+    font-size:175%;
+}
+
+#info label {
+    font-size:75%;
+    font-style:bold;
+}
+#input-right label, #input-left label{
+    margin-top:2vh;
+}
+
+.right p {
+    color:black;
+    font-size:1.5vw;
 }
