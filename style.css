@@ -1,6 +1,16 @@
 :root {
     --left-width: 40vw;
     --right-width: 60vw;
+    --font-logo: clamp(9rem,4vw,1000px);
+    --font-large: clamp(1.5rem,1vw,250px);
+    --font-medium: clamp(1rem,1.5vw,200px);
+    --font-small: clamp(0.7rem,0.5vw,100px);
+
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./font/Norse-Bold.otf);
 }
 
 * {
@@ -37,10 +47,11 @@
 
 
 #odin-logo {
-    margin-top: 40%;
+    font-family: Norse-Bold;
+    margin-top: clamp(25vh,25rem,285px);
     display:flex;
     flex-direction:row;
-    height:17%;
+    height:15%;
     width:100%;
     justify-content:center;
     background: rgba(0,0,0,40%)
@@ -51,7 +62,7 @@
     align-self:center;
 }
 #odin-txt {
-    font-size:50px;
+    font-size:var(--font-logo);
     color:white;
     align-self:center; 
 }
@@ -104,11 +115,13 @@
 }
 
 #form button{
-    width:15vw;
+    width:clamp(13rem,15vw, 100px);
     height:4.5vh;
     color:white;
-    background:darkolivegreen;
+    background:#596D48;
     border-radius:0.5vw;
+    border-color: #596D48;
+    border-style:none;
 }
 
 .right p,.right b, .right button, #input-info {
@@ -121,22 +134,28 @@
  }
 
 .right p {
+    font-weight:bold;
     margin-bottom:4%;
 }
 
 #info input{
     height:3vh;
     border-radius: 0.5vw;
-    border-color:lightgray;
+    border-color:#E5E7EB;
+    border-style:solid;
 }
 
-#info input:valid{
+#info input:user-valid{
     border-color:green;
     
 }
 
-#info input:invalid{
+#info input:user-invalid{
     border-color:red;
+}
+
+#info input:focus{
+    border-color: blue;
 }
 
 #input-info, .right label b{
@@ -144,18 +163,18 @@
 }
 
 .right label b {
-    font-size:175%;
+    font-size:var(--font-large);
 }
 
 #info label {
-    font-size:75%;
+    font-size:var(--font-small);
     font-style:bold;
 }
 #input-right label, #input-left label{
-    margin-top:2vh;
+    margin-top:10%;
 }
 
 .right p {
     color:black;
-    font-size:1.5vw;
+    font-size: var(--font-large);
 }
