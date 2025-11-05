@@ -75,7 +75,7 @@
 /* right */
 
 .right{
-    background:lightgrey;
+    background:#f9fafb;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -163,6 +163,7 @@
 }
 
 .right label b {
+    color: #3a434e;
     font-size:var(--font-large);
 }
 
@@ -178,3 +179,7 @@
     color:black;
     font-size: var(--font-large);
 }
+
+/*  Todo
+    1 Streamline further
+    2 ensure scaling across aspect ratios*/
