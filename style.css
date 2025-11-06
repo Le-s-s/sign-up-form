@@ -5,6 +5,7 @@
     --font-large: clamp(1.5rem,1vw,250px);
     --font-medium: clamp(1rem,1.5vw,200px);
     --font-small: clamp(0.7rem,0.5vw,100px);
+    
 
 }
 
@@ -114,7 +115,7 @@
     justify-content:center;
 }
 
-#form button{
+.right #form button{
     width:clamp(13rem,15vw, 100px);
     height:4.5vh;
     color:white;
@@ -138,12 +139,20 @@
     margin-bottom:4%;
 }
 
-#info input{
-    height:3vh;
-    border-radius: 0.5vw;
-    border-color:#E5E7EB;
-    border-style:solid;
+.right #info input:focus{
+    border-color: blue;
+    box-shadow: 2px 2px 2px rgb(0,0,0, 30%);
 }
+
+.right #info input{
+    outline: none;
+    border-width:1px;
+    height:3vh;
+    border-radius: 0.3vw;
+    border-style:solid;
+    border-color:#E5E7EB;
+}
+
 
 #info input:user-valid{
     border-color:green;
@@ -152,10 +161,6 @@
 
 #info input:user-invalid{
     border-color:red;
-}
-
-#info input:focus{
-    border-color: blue;
 }
 
 #input-info, .right label b{
@@ -176,7 +181,6 @@
 }
 
 .right p {
-    color:black;
     font-size: var(--font-large);
 }
 
