@@ -80,7 +80,9 @@
     justify-content: center;
     background: rgba(0, 0, 0, 40%);
 }
-
+#odin-img,#odin-txt{
+    align-self:center;
+}
 #odin-img {
     height: 70%;
 }
@@ -139,7 +141,7 @@
 
 #sign-up,
 .right #form button {
-    box-shadow: 0.5vh 0 0.5vh 0.5vh rgb(0 0 0 / 10%);
+    box-shadow: 0.5vh 0.6vh 0.5vh 0.5vh rgb(0 0 0 / 10%);
 }
 
 /* Inputs */
