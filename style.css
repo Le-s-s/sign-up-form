@@ -1,12 +1,13 @@
 :root {
     --left-width: 40vw;
     --right-width: 60vw;
-    --font-logo: clamp(9rem,4vw,1000px);
-    --font-large: clamp(1.5rem,1vw,250px);
-    --font-medium: clamp(1rem,1.5vw,200px);
-    --font-small: clamp(0.7rem,0.5vw,100px);
-    
 
+    --font-logo: clamp(6rem, 4vw, 1000px);
+    --font-large: clamp(1.5rem, 1vw, 250px);
+    --font-medium: clamp(1rem, 1.5vw, 200px);
+    --font-small: clamp(1rem, 0.5vw, 100px);
+
+    --label-color: #3a434e;
 }
 
 @font-face {
@@ -14,175 +15,179 @@
     src: url(./font/Norse-Bold.otf);
 }
 
+/* Reset */
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-#site-container{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    height:100vh;
+/* ---- Shared Flex Layout ---- */
+#site-container,
+.left,
+.right,
+#odin-logo,
+#input-info,
+#input-right,
+#info,
+#sign-up {
+    display: flex;
 }
 
-/* left side */
+#site-container,
+#odin-logo {
+    flex-direction: row;
+}
+
+.left,
+.right,
+#input-right,
+#info,
+#sign-up {
+    flex-direction: column;
+}
+
+/* ---- Outer Layout ---- */
+#site-container {
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.left {
+    justify-content: space-between;
+    width: var(--left-width);
+    align-items: center;
+}
+
+.right {
+    background: white;
+    justify-content: center;
+    width: var(--right-width);
+}
+
+/* ---- Left Side ---- */
 #odin-back {
-    position:absolute;
+    position: absolute;
     z-index: -1;
-    height:100vh;
-    width:var(--left-width);
+    height: 100vh;
+    width: var(--left-width);
 }
-
-.left{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    width:var(--left-width);
-    align-items:center;
-}
-
-
-
 
 #odin-logo {
     font-family: Norse-Bold;
-    margin-top: clamp(25vh,25rem,285px);
-    display:flex;
-    flex-direction:row;
-    height:15%;
-    width:100%;
-    justify-content:center;
-    background: rgba(0,0,0,40%)
+    margin-top: clamp(10rem, 26.5vh, 258px);
+    height: 15%;
+    width: 100%;
+    justify-content: center;
+    background: rgba(0, 0, 0, 40%);
 }
 
 #odin-img {
     height: 70%;
-    align-self:center;
 }
+
 #odin-txt {
-    font-size:var(--font-logo);
-    color:white;
-    align-self:center; 
+    font-size: var(--font-logo);
+    color: white;
 }
 
-#credit{
-    color:white;
-    
+#credit {
+    color: white;
 }
 
-/* right */
-
-.right{
-    background:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    width:var(--right-width);
-}
-
-#input-info{
- display:flex;
-}
-
+/* ---- Right Side ---- */
 #input-left {
     margin-right: 4vw;
 }
 
-#input-right {
-    display:flex;
-    flex-direction:column;
+#sign-up {
+    height: clamp(1rem, 35vh, 360px);
+    width: var(--right-width);
+    justify-content: center;
 }
 
-#form{
-
-}
-
-#info{
-    display:flex;
-    flex-direction:column;
-}
-
-#sign-up{
-    height:30vh;
-    width:var(--right-width);
-    box-shadow: 0.5vh 0 0.5vh 0.5vh rgb(0,0,0, 30%);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.right #form button{
-    width:clamp(13rem,15vw, 100px);
-    height:4.5vh;
-    color:white;
-    background:#596D48;
-    border-radius:0.5vw;
-    border-color: #596D48;
-    border-style:none;
-}
-
-.right p,.right b, .right button, #input-info {
+/* Shared spacing */
+.right p,
+.right b,
+.right button,
+#input-info {
     margin-left: 5%;
     width: 80%;
 }
 
-.right b, .right button, #sign-up{
-     margin-top:4%;
- }
+.right b,
+.right button,
+#sign-up {
+    margin-top: 4%;
+}
 
 .right p {
-    font-weight:bold;
-    margin-bottom:4%;
+    font-weight: bold;
+    margin-bottom: 4%;
 }
 
-.right #info input:focus{
-    border-color: blue;
-    box-shadow: 2px 2px 2px rgb(0,0,0, 30%);
+/* ---- Form ---- */
+.right #form button {
+    width: clamp(13rem, 15vw, 100px);
+    height: 4.5vh;
+    color: white;
+    font-weight: bold;
+    background: #596D48;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: var(--font-button);
 }
 
-.right #info input{
+#sign-up,
+.right #form button {
+    box-shadow: 0.5vh 0 0.5vh 0.5vh rgb(0 0 0 / 10%);
+}
+
+/* Inputs */
+.right #info input {
     outline: none;
-    border-width:1px;
-    height:3vh;
+    height: 3vh;
+    border: 1px solid #E5E7EB;
     border-radius: 0.3vw;
-    border-style:solid;
-    border-color:#E5E7EB;
 }
 
-
-#info input:user-valid{
-    border-color:green;
-    
+.right #info input:focus {
+    border-color: blue;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 30%);
 }
 
-#info input:user-invalid{
-    border-color:red;
+#info input:user-valid {
+    border-color: green;
 }
 
-#input-info, .right label b{
+#info input:user-invalid {
+    border-color: red;
+}
+
+/* Labels */
+#input-info,
+.right label b {
     margin-bottom: 2%;
 }
 
-.right label b {
-    color: #3a434e;
-    font-size:var(--font-large);
-}
-
-#info label {
-    font-size:var(--font-small);
-    font-style:bold;
-}
-#input-right label, #input-left label{
-    margin-top:10%;
-}
-
+.right label b,
 .right p {
     font-size: var(--font-large);
 }
 
-/*  Todo
-    1 Streamline further
-    2 ensure scaling across aspect ratios*/
+#input-info,
+.right label b,
+#input-right label,
+#input-left label {
+    color: var(--label-color);
+}
+
+#info label {
+    
+    font-size: clamp(0.75rem, 0.5vw, 100px);
+}
+
+#input-right label,
+#input-left label {
+    font-weight: bold;
+    margin-top: 10%;
+}
